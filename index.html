@@ -14,7 +14,17 @@
 
   <script>
     const root = document.getElementById("root");
-    const sapn = React.createElement("span", { id: "sexy-span" });
-    ReactDOM.render(span, root);
+    const h3 = React.createElement(
+      "h3",
+      { onMounseEnter: () => console.log("mouse enter") },
+      "Hello I'm a span"
+    );
+    const btn = React.createElement(
+      "button",
+      { onClick: () => console.log("im clicked") },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [span, btn]);
+    ReactDOM.render(container, root);
   </script>
 </html>
